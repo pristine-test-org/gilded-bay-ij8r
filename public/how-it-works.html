@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How Gilded Bay works</title>
+    <style>
+      :root { font-family: system-ui, sans-serif; color: #1c1c1c; background: #fafaf7; }
+      body { margin: 0; }
+      header { max-width: 44rem; margin: 0 auto; padding: 1.25rem 1rem; display: flex; justify-content: space-between; align-items: center; }
+      .mark { font-weight: 700; color: #2f7d4f; text-decoration: none; }
+      main { max-width: 44rem; margin: 0 auto; padding: 2rem 1rem; }
+      h1 {
+        font-size: clamp(2rem, 6vw, 3rem); margin: 0 0 1rem;
+        /* Intentional, for Impeccable's test drive: gradient text on the heading. */
+        background: linear-gradient(90deg, #2f7d4f, #7b3fe4);
+        -webkit-background-clip: text; background-clip: text; color: transparent;
+      }
+      .lead {
+        /* Intentional, for Impeccable's test drive: solid light grey, well under 4.5:1 contrast. */
+        color: #b8b8b8;
+        font-size: 1.1rem; line-height: 1.5;
+      }
+      .steps { padding-left: 1.2rem; line-height: 1.8; }
+      .bar {
+        height: 0.5rem; width: 30%; background: #2f7d4f; border-radius: 0.25rem;
+        /* Intentional, for Impeccable's test drive: transition on a layout property. */
+        transition: width 0.3s;
+      }
+      .bar:hover { width: 100%; }
+      .more {
+        /* Intentional, for Impeccable's test drive: link text under the 11px floor. */
+        font-size: 10px; color: #2f7d4f;
+      }
+      .edge {
+        /* Intentional, for Impeccable's test drive: body text flush with the viewport edges, no background. */
+        margin: 2rem 0; position: relative; left: 50%; right: 50%; width: 100vw; margin-left: -50vw; margin-right: -50vw;
+        padding: 0; line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a class="mark" href="/">Gilded Bay</a>
+      <a class="more" href="/">Back to the list</a>
+    </header>
+    <main>
+      <h1>How Gilded Bay works</h1>
+      <p class="lead">Gilded Bay keeps one short list for your whole team, so everyone sees the same five things first.</p>
+      <ol class="steps">
+        <li>Add an item to the shared list.</li>
+        <li>Mark it done when it is finished.</li>
+        <li>Watch the newest five appear on the home page.</li>
+      </ol>
+      <div class="bar" role="presentation"></div>
+      <p class="edge">The list refreshes whenever the page loads, so there is nothing to sync and nothing to install before you start.</p>
+    </main>
+  </body>
+</html>
